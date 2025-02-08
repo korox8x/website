@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoroX8X Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            background-image: URL("starry-milky-way-galaxy.jpg");
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: transparent;
+            color: #00b3ff;
+            padding: 20px;
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 30px #00b3ff;
+            /* Removed the animation */
+        }
+
+        .channel-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            background: #00b3ff;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .channel-button:hover {
+            background: #fff;
+            color: #00b3ff;
+            transform: scale(1.1);
+        }
+
+        .cool-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #00b3ff;
+            color: black;
+            border: 2px solid white;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .cool-button:hover {
+            background: black;
+            color: #00b3ff;
+            border-color: #00b3ff;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Hidden content by default */
+        #more-info {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        .more-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .more-content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .more-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .more-content ul li {
+            font-size: 18px;
+        }
+
+    </style>
+    <script>
+        // JavaScript function to toggle visibility of the content and hide the header
+        function toggleMoreInfo() {
+            var moreInfo = document.getElementById("more-info");
+            var button = document.getElementById("more-button");
+            var header = document.querySelector("header");
+            
+            // Toggle visibility of the additional content
+            if (moreInfo.style.display === "none") {
+                moreInfo.style.display = "block";
+                button.innerHTML = "Show Less";
+                
+                // Hide the header
+                header.style.display = "none";
+            } else {
+                moreInfo.style.display = "none";
+                button.innerHTML = "Click for More";
+                
+                // Show the header again
+                header.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to KoroX8X Website 🎮</h1>
+    </header>
+    <main>
+        <div class="gaming-section">
+            <h2>My YouTube Channels</h2>
+            <div class="channel-links">
+                <a href="http://www.youtube.com/@KoroX8X" target="_blank" class="channel-button">KoroX8X Channel 1</a>
+                <a href="http://www.youtube.com/@koroX8X" target="_blank" class="channel-button">KoroX8X Channel 2</a>
+            </div>
+        </div>
+        
+        <!-- Button to toggle visibility of more info -->
+        <button class="cool-button" id="more-button" onclick="toggleMoreInfo()">Click for More</button>
+        
+        <!-- Hidden content about the channel -->
+        <div id="more-info" class="more-content">
+            <h3>About Me</h3>
+            <p>Hey there! I'm the creator behind KoroX8X, and I wanted to share a little bit about myself.</p>
+            
+            <h3>Personal Info</h3>
+            <p><strong>Age:</strong> 12 years old</p>
+            <p><strong>Location:</strong> Konstanz, Germany</p>
+            <p><strong>Interests:</strong> Gaming, technology, coding, and creating fun content for my viewers!</p>
+
+            <h3>More About My Channels</h3>
+            <p>On my channels, you can expect:</p>
+            <ul>
+                <li>Exciting Fortnite gameplay</li>
+                <li>Helpful tips and tricks</li>
+                <li>Funny moments and challenges</li>
+            </ul>
+            
+            <h3>Join My Discord Server</h3>
+            <p>Want to chat and connect with me and my community? Join my Discord server here:</p>
+            <a href="https://discord.gg/j6mGMZWr" target="_blank" class="cool-button">Join My Discord</a>
+
+            <p>Thanks for checking out my website! I love sharing my gaming experiences with you all!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 KoroX8X | Gaming & Content Creation</p>
+    </footer>
+</body>
+</html>
